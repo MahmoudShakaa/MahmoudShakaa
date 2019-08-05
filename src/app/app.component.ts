@@ -41,7 +41,6 @@ export class AppComponent implements OnInit {
   }
 
   onScroll(event) {
-    console.log((event.target.scrollTop + event.target.offsetHeight) >= event.target.scrollHeight);
     if ((Math.round(event.target.scrollTop) + event.target.offsetHeight) >= event.target.scrollHeight) {
       this.offSet = this.offSet + this.count + 1;
       this.appService.getItems(this.offSet, this.count).subscribe(data => {
